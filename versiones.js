@@ -59,7 +59,7 @@ versiones.add = (req, res) => {
   });
 };
 
-versiones.modify = (req, res) => {
+versiones.modifyByApp = (req, res) => {
   const appTarget = req.params.app;
   const { app, minima, actual, urlStoreAndroid, urlStoreIos } = req.body;
 
