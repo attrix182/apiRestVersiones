@@ -3,6 +3,8 @@ const fastify = require("fastify")({
     pluginTimeout: 10000,
 });
 
+const path = require("path")
+
 //importar clase usuario
 const versiones = require("./versiones.js");
 
@@ -20,10 +22,19 @@ fastify.register(require("fastify-cors"), {
     methods: ["POST", "GET", "PUT", "DELETE"]
 })
 
+fastify.register(require("fastify-static"), {
+    root: path.join(__dirname,'public'),
+    prefix:'/public/',
+})
 
-fastify.post("/versiones", versiones.add);
+
+fastify.get("/", function (req, reply) {
+    reply.sendFile('index.html')
+  })
 
 fastify.get("/versiones", versiones.getAll);
+
+fastify.post("/versiones", versiones.add);
 
 fastify.get("/versiones/:app", versiones.getByApp);
 
