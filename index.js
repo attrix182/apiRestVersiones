@@ -20,6 +20,9 @@ fastify.register(require("fastify-cors"), {
     methods: ["POST", "GET", "PUT", "DELETE"]
 })
 
+
+fastify.post("/versiones", versiones.add);
+
 fastify.get("/versiones", versiones.getAll);
 
 fastify.get("/versiones/:app", versiones.getByApp);
