@@ -1,4 +1,12 @@
 {
+  "name": "apirestversiones",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "dev": "node index.js"
+  },
   "dependencies": {
     "fastify": "^3.27.1",
     "fastify-cors": "^6.0.2",
