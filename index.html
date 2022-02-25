@@ -1,0 +1,25 @@
+<h1>Endpoints</h1>
+
+<h2>GET /versiones -> Trae versiones de ambas apps</h2>
+
+<h2>GET /versiones/MaMovil -> Trae versiones de MA MOVIL</h2>
+
+<h2>POST /versiones -> Agrega una app y sus versiones
+    Ej request: {
+        "app":"aplicacion",
+        "minima":"3.4.0",
+        "actual":"3.5.1",
+        "urlStoreAndroid":"url",
+        "urlStoreIos":"url2"
+    }
+</h2>
+
+<h2>PUT /versiones/MaMovil -> Modifica valores de una version 
+    Ej request: {
+        "app":"aplicacion",
+        "minima":"3.4.0",
+        "actual":"3.5.1",
+        "urlStoreAndroid":"url",
+        "urlStoreIos":"url2"
+    }
+</h2>
