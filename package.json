@@ -1,7 +1,17 @@
 {
+  "name": "apirestversiones",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
   "dependencies": {
     "fastify": "^3.27.1",
     "fastify-cors": "^6.0.2",
-    "mysql": "^2.18.1"
+    "fastify-static": "^4.5.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
   }
 }

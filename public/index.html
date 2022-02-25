@@ -1,0 +1,40 @@
+<div align="center">
+    <h1>Endpoints</h1>
+</div>
+
+<hr>
+<h2> <a href="https://apirestversiones.herokuapp.com/versiones">GET /versiones </a> -> Trae versiones de ambas apps</h2>
+<hr>
+<h2> <a href="https://apirestversiones.herokuapp.com/versiones/MaMovil">GET /versiones/MaMovil</a> -> Trae versiones de MA MOVIL</h2>
+<hr>
+<h2>POST /versiones -> Agrega una app y sus versiones
+    <pre>
+        <code>
+    Ej request: {
+        "app":"aplicacion",
+        "minima_android":"3.4.0",
+        "minima_ios": "3.4.0",
+        "actual_android":"3.5.1",
+        "actual_ios":"3.5.1"
+        "urlStoreAndroid":"url",
+        "urlStoreIos":"url2"
+    }
+</code>
+</pre>
+</h2>
+<hr>
+<h2>PUT /versiones/MaMovil -> Modifica valores de una version 
+    <pre>
+        <code>
+    Ej request: {
+        "app":"aplicacion",
+        "minima_android":"3.4.0",
+        "minima_ios": "3.4.0",
+        "actual_android":"3.5.1",
+        "actual_ios":"3.5.1"
+        "urlStoreAndroid":"url",
+        "urlStoreIos":"url2"
+    }
+    </code>
+    </pre>
+</h2>

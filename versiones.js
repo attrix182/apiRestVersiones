@@ -39,12 +39,14 @@ versiones.getByApp = (req, res) => {
 versiones.add = (req, res) => {
   const consultaSQL = 'INSERT INTO versiones SET ?';
 
-  const { app, minima, actual, urlStoreAndroid, urlStoreIos } = req.body; //destructuring
+  const { app, minima_android, actual_android, minima_ios, actual_ios, urlStoreAndroid, urlStoreIos } = req.body; //destructuring
 
   const newApp = {
     app: app,
-    minima: minima,
-    actual: actual,
+    minima_android: minima_android,
+    actual_android: actual_android,
+    minima_ios: minima_ios,
+    actual_ios: actual_ios,
     urlStoreAndroid: urlStoreAndroid,
     urlStoreIos: urlStoreIos
   };
@@ -61,12 +63,14 @@ versiones.add = (req, res) => {
 
 versiones.modifyByApp = (req, res) => {
   const appTarget = req.params.app;
-  const { app, minima, actual, urlStoreAndroid, urlStoreIos } = req.body;
+  const { app, minima_android, actual_android, minima_android, actual_android, urlStoreAndroid, urlStoreIos } = req.body;
 
   const consulta = `UPDATE versiones SET 
     app = '${app}',
-    minima = '${minima}',
-    actual = '${actual}',
+    minima_android = '${minima_android}',
+    actual_android = '${actual_android}',
+    minima_ios = '${minima_ios}',
+    actual_ios = '${actual_ios}',
     urlStoreAndroid = '${urlStoreAndroid}', 
     urlStoreIos = '${urlStoreIos}' WHERE app = '${appTarget}'`;
 
