@@ -63,7 +63,7 @@ versiones.add = (req, res) => {
 
 versiones.modifyByApp = (req, res) => {
   const appTarget = req.params.app;
-  const { app, minima_android, actual_android, minima_android, actual_android, urlStoreAndroid, urlStoreIos } = req.body;
+  const { app, minima_android, actual_android, minima_ios, actual_ios, urlStoreAndroid, urlStoreIos } = req.body;
 
   const consulta = `UPDATE versiones SET 
     app = '${app}',
@@ -85,3 +85,5 @@ versiones.modifyByApp = (req, res) => {
 };
 
 module.exports = versiones;
+
+
